@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-heroku-connector</artifactId>
-			<version>${VERSION}</version>
+
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
