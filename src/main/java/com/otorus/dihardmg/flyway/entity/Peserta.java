@@ -28,6 +28,12 @@ public class Peserta {
     @NotEmpty
     private String email;
 
+    @Column(name = "tanggal_lahir", nullable = false)
+    @Temporal(TemporalType.DATE)
+    @Past
+    @NotNull
+    private Date tanggalLahir;
+
     public String getId() {
         return id;
     }
@@ -59,13 +65,4 @@ public class Peserta {
     public void setTanggalLahir(Date tanggalLahir) {
         this.tanggalLahir = tanggalLahir;
     }
-
-    @Column(name = "tanggal_lahir", nullable = false)
-    @Temporal(TemporalType.DATE)
-    @Past
-    @NotNull
-    private Date tanggalLahir;
-
-
-
 }
