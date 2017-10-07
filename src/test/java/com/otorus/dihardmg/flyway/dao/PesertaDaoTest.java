@@ -14,17 +14,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class PesertaDaoTest {
 
     @Autowired
-    PesertaDao pd;
+    private PesertaDao pd;
 
     @Test
-    public void testCariById(){
-        Peserta p = pd.findOne("aa1");
+    public void testQuery(){
+        Peserta p = pd.findOne("aa4");
         Assert.assertNotNull(p);
-        Assert.assertEquals("naruto", p.getNama());
-        Assert.assertEquals("naruto@gmail.com", p.getEmail());
+        Assert.assertEquals("kakasi", p.getNama());
+        Assert.assertEquals("kakasi@gmail.com", p.getEmail());
 
         Peserta px = pd.findOne("xx");
         Assert.assertNull(px);
     }
+
 
 }
