@@ -3,6 +3,7 @@ before_script:
 
 after_script:
  - echo "Clean up activity can be done here !."
+image: docker:latest
 
 cache:
  paths:
@@ -17,8 +18,7 @@ build:
  image: maven:3.3.9-jdk-8
  script:
  - mvn clean package
- tags:
- - docker
+
 
 deploy_dev:
  stage: deploy
@@ -27,26 +27,10 @@ deploy_dev:
  - apt-get update -qy
  - apt-get install -y ruby-dev
  - gem install dpl
- - dpl --provider=heroku --app=vel-ci-api-dev --api-key=$HEROKU_API_KEY
+ - dpl --provider=heroku --app=flyway-springboot-dev  --api-key=$HEROKU_API_KEY
  environment:
  name: dev
  url: https://vel-ci-api-dev.herokuapp.com
- only:
- - master
- tags:
- - docker
-
-deploy_staging:
- stage: deploy
- image: ruby:2.3
- script:
- - apt-get update -qy
- - apt-get install -y ruby-dev
- - gem install dpl
- - dpl --provider=heroku --app=vel-ci-api-stg --api-key=$HEROKU_API_KEY
- environment:
- name: staging
- url: https://vel-ci-api-stg.herokuapp.com
  only:
  - master
  tags:
