@@ -1,8 +1,4 @@
-before_script:
- - echo "Execute scripts which are required to bootstrap the application. !"
 
-after_script:
- - echo "Clean up activity can be done here !."
 image: docker:latest
 
 cache:
@@ -15,10 +11,9 @@ stages:
 
 build:
  stage: build
- image: maven:3.3.9-jdk-8
+ image: maven:3-jdk-8
  script:
  - mvn clean package
-
 
 deploy_dev:
  stage: deploy
@@ -31,5 +26,4 @@ deploy_dev:
 
  only:
  - master
- tags:
- - docker
+
