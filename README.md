@@ -6,6 +6,11 @@
  - MySql
  - Flyway
 
+ 
+> Continuous Delivery
+  -travis-ci
+
+
 >Test deploy heroku
  - spring-cloud-heroku-connector
  - postgresql
