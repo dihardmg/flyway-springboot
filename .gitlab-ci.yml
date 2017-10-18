@@ -1,9 +1,23 @@
 
 image: docker:latest
 
+services:
+  - docker:dind
+  - mysql:latest
+
+
 cache:
  paths:
  - /root/.m2/repository
+
+variables:
+  DOCKER_DRIVER: overlay
+  SPRING_PROFILES_ACTIVE: docker,localstorage
+  MYSQL_ROOT_PASSWORD: admin
+  MYSQL_DATABASE: belajar
+  MYSQL_USER: belajaruser
+  MYSQL_PASSWORD: belajarpaswd
+  SPRING_DATASOURCE_URL: jdbc:mysql://localhost/belajar
 
 stages:
  - build
@@ -26,4 +40,3 @@ deploy_dev:
 
  only:
  - master
-
