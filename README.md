@@ -1,14 +1,16 @@
-[![Build Status](https://travis-ci.org/dihardmg/flyway-springboot.svg?branch=master)](https://travis-ci.org/dihardmg/flyway-springboot)
 
->Springboot Flyway Sample  
+
+# Springboot Flyway Sample  # 
 
  - JPA
  - MySql
  - Flyway
 
- 
-> Continuous Delivery
-  -travis-ci
+
+> Setup Continuous Integration
+  - travis-ci
+
+  [![Build Status](https://travis-ci.org/dihardmg/flyway-springboot.svg?branch=master)](https://travis-ci.org/dihardmg/flyway-springboot)
 
 
 >Test deploy heroku
