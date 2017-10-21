@@ -2,9 +2,8 @@
 
 # Springboot Flyway Sample  #
 
-[![Build Status](https://travis-ci.org/dihardmg/flyway-springboot.svg?branch=master)](https://travis-ci.org/dihardmg/flyway-springboot)
+[![Build Status](https://travis-ci.org/dihardmg/flyway-springboot.svg?branch=master)](https://travis-ci.org/dihardmg/flyway-springboot)|[![codecov](https://codecov.io/gh/dihardmg/flyway-springboot/branch/master/graph/badge.svg)](https://codecov.io/gh/dihardmg/flyway-springboot)
 
-[![codecov](https://codecov.io/gh/dihardmg/flyway-springboot/branch/master/graph/badge.svg)](https://codecov.io/gh/dihardmg/flyway-springboot)
 
  - JPA
  - MySql
