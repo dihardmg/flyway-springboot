@@ -1,7 +1,6 @@
 # Springboot Flyway Sample  #
 
 [![Build Status](https://travis-ci.org/dihardmg/flyway-springboot.svg?branch=master)](https://travis-ci.org/dihardmg/flyway-springboot)
-
  - JPA
  - RESTful
  - MySql
