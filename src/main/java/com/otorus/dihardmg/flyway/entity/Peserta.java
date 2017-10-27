@@ -1,5 +1,6 @@
 package com.otorus.dihardmg.flyway.entity;
 
+import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
@@ -11,6 +12,7 @@ import javax.validation.constraints.Size;
 import java.util.Date;
 
 @Entity
+@Data
 public class Peserta {
     @Id @GeneratedValue(generator = "uuid")
     @GenericGenerator(name = "uuid", strategy = "uuid2")
@@ -34,35 +36,4 @@ public class Peserta {
     @NotNull
     private Date tanggalLahir;
 
-    public String getId() {
-        return id;
     }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getNama() {
-        return nama;
-    }
-
-    public void setNama(String nama) {
-        this.nama = nama;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Date getTanggalLahir() {
-        return tanggalLahir;
-    }
-
-    public void setTanggalLahir(Date tanggalLahir) {
-        this.tanggalLahir = tanggalLahir;
-    }
-}
